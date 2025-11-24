@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Pig Game</title>
+  </head>
+  <body>
+    <main>
+      <section class="player player--0 player--active">
+        <h2 class="name" id="name--0">Player 1</h2>
+        <p class="score" id="score--0">43</p>
+        <div class="current">
+          <p class="current-label">Current</p>
+          <p class="current-score" id="current--0">0</p>
+        </div>
+      </section>
+      <section class="player player--1">
+        <h2 class="name" id="name--1">Player 2</h2>
+        <p class="score" id="score--1">24</p>
+        <div class="current">
+          <p class="current-label">Current</p>
+          <p class="current-score" id="current--1">0</p>
+        </div>
+      </section>
+
+      <div class="dice-wrap">
+        <div class="dice">
+          <div class="face front dice-1"></div>
+          <div class="face back dice-6"></div>
+          <div class="face top dice-2"></div>
+          <div class="face bottom dice-5"></div>
+          <div class="face right dice-4"></div>
+          <div class="face left dice-3"></div>
+        </div>
+      </div>
+      <button class="btn btn--new">🔄 New game</button>
+      <button class="btn btn--roll">🎲 Roll dice</button>
+      <button class="btn btn--hold">📥 Hold</button>
+      <button class="btn btn--rules">ℹ️</button>
+      <div class="modal hidden">
+        <button class="close-modal return">&times;</button>
+        <h3>RULES</h3>
+        <p>
+          <strong>Objective:</strong> Be the first player to reach
+          <strong>100 points.</strong>
+        </p>
+        <h4>Gameplay:</h4>
+        <p>
+          Players take turns rolling a die. On a player’s turn - Roll the die:
+        </p>
+        <ul>
+          <li><strong>1:</strong> End the turn, lose points from that turn.</li>
+          <li>
+            <strong>2-6:</strong> Add the rolled number to the turn score.
+          </li>
+        </ul>
+        <p>
+          The player can choose to hold to add the turn score to their total
+          score, ending their turn. <strong>The first player</strong> to reach
+          100 points <strong>wins.</strong>
+        </p>
+        <h4>Summary:</h4>
+        <p>
+          Roll to accumulate points. Hold to secure turn points. Lose points if
+          you roll a 1. Game ends when a player reaches 100 points.
+        </p>
+        <button id="btn-brown" class="btn return">Let's play!</button>
+      </div>
+      <div class="overlay hidden"></div>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
